@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Catalogo Usuarios</title>
+</head>
+
+<body>
+    <center>
+        <h1>Ususarios</h1>
+    </center>
+    <div class="container">
+        <table border="1px">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Pass</th>
+            </tr>
+            <% users.forEach(user=> { %>
+                <tr>
+                    <td>
+                        <%= user.id_usuario %>
+                    </td>
+                    <td>
+                        <%= user.nombre_usuario %>
+                    </td>
+                    <td>
+                        <%= user.ap1_usuario %>
+                    </td>
+                    <td>
+                        <%= user.ap2_usuario %>
+                    </td>
+                    <td>
+                        <%= user.contrasena %>
+                    </td>
+                </tr>
+                <% }); %>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
